@@ -14,7 +14,7 @@ namespace AutoFixer.Toggles
             ValueKind = RegistryValueKind.DWord;
             CheckValue = 1;
             UncheckValue = 0;
-            ReturnMessage = null;
+            ReturnMessage = "Requires a restart to take affect...";
 
             if (Utils.IsWindows10(0)) DefaultValue = false;
             else Unavailable = true;

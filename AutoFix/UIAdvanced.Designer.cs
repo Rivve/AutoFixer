@@ -43,6 +43,7 @@
             this.action_list = new System.Windows.Forms.DataGridView();
             this.uninstall = new System.Windows.Forms.TabControl();
             this.general_tab = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.auto_mode_button = new System.Windows.Forms.Button();
             this.reset_auto_button = new System.Windows.Forms.Button();
@@ -156,6 +157,7 @@
             // 
             // specslist
             // 
+            this.specslist.HideSelection = false;
             this.specslist.Location = new System.Drawing.Point(4, 6);
             this.specslist.Name = "specslist";
             this.specslist.Size = new System.Drawing.Size(760, 377);
@@ -215,6 +217,7 @@
             // 
             // general_tab
             // 
+            this.general_tab.Controls.Add(this.linkLabel1);
             this.general_tab.Controls.Add(this.button1);
             this.general_tab.Controls.Add(this.auto_mode_button);
             this.general_tab.Controls.Add(this.reset_auto_button);
@@ -225,6 +228,17 @@
             this.general_tab.TabIndex = 4;
             this.general_tab.Text = "General";
             this.general_tab.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(714, 412);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(38, 13);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Github";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
@@ -287,7 +301,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "UIAdvanced";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AutoFixer";
+            this.Text = "AutoFixer - Rebuild";
             this.Activated += new System.EventHandler(this.UIAdvanced_Activated);
             this.Load += new System.EventHandler(this.UIAdvanced_Load);
             this.uninstall_apps_tab.ResumeLayout(false);
@@ -301,6 +315,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.action_list)).EndInit();
             this.uninstall.ResumeLayout(false);
             this.general_tab.ResumeLayout(false);
+            this.general_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).EndInit();
             this.ResumeLayout(false);
 
@@ -326,5 +341,6 @@
         private System.Windows.Forms.Button reset_auto_button;
         private wyDay.Controls.AutomaticUpdater UpdateChecker;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

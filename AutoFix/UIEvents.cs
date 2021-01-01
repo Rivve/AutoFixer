@@ -29,6 +29,7 @@ namespace AutoFixer
                 UpdateChecker.InstallNow();
             }
         }
+     
 
         /// <summary>
         /// Run the Automode since user pressed the button

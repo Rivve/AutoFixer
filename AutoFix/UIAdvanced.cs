@@ -73,6 +73,7 @@ namespace AutoFixer
             FixGridView(ref togglelist);
         }
 
+
         /// <summary>
         /// Fill the general tab with the actions there is in the system
         /// </summary>
@@ -199,5 +200,11 @@ namespace AutoFixer
                 bgworker.RunWorkerAsync();
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Rivve/AutoFixer---Continued");
+        }
     }
+
 }

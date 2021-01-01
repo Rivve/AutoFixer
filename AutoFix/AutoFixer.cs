@@ -5,6 +5,9 @@ using System.IO;
 using OpenHardwareMonitor.Hardware;
 
 /*
+ * This is a Fork of Autofixer by Marcus Strandner (https://bitbucket.org/gnako/autofixer/src/master/) 
+ * Made for the purpose of improving and updating the software as the original author has abandoned the project.
+ * 
  * AutoFixer is a tool which shall help users in a friendly way to toggle
  * certain parameters/functions inside of Windows. The program is also
  * used to display what products the computer is containing.

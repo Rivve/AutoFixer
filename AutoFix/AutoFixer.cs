@@ -49,11 +49,11 @@ namespace AutoFixer
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr CreateFile([MarshalAs(UnmanagedType.LPTStr)] string filename,
-                                               [MarshalAs(UnmanagedType.U4)] uint access,
-                                               [MarshalAs(UnmanagedType.U4)] FileShare share,
+                                               [MarshalAs(UnmanagedType.U4)]     uint access,
+                                               [MarshalAs(UnmanagedType.U4)]     FileShare share,
                                                                                  IntPtr securityAttributes,
-                                               [MarshalAs(UnmanagedType.U4)] FileMode creationDisposition,
-                                               [MarshalAs(UnmanagedType.U4)] FileAttributes flagsAndAttributes,
+                                               [MarshalAs(UnmanagedType.U4)]     FileMode creationDisposition,
+                                               [MarshalAs(UnmanagedType.U4)]     FileAttributes flagsAndAttributes,
                                                                                  IntPtr templateFile);
 
         /// <summary>

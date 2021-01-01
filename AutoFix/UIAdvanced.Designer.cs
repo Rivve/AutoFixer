@@ -48,7 +48,6 @@
             this.auto_mode_button = new System.Windows.Forms.Button();
             this.reset_auto_button = new System.Windows.Forms.Button();
             this.UpdateChecker = new wyDay.Controls.AutomaticUpdater();
-            this.lblVersion = new System.Windows.Forms.Label();
             this.uninstall_apps_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uninstall_app_list)).BeginInit();
             this.toggle_tab.SuspendLayout();
@@ -218,7 +217,6 @@
             // 
             // general_tab
             // 
-            this.general_tab.Controls.Add(this.lblVersion);
             this.general_tab.Controls.Add(this.linkLabel1);
             this.general_tab.Controls.Add(this.button1);
             this.general_tab.Controls.Add(this.auto_mode_button);
@@ -290,16 +288,6 @@
             this.UpdateChecker.ReadyToBeInstalled += new System.EventHandler(this.UpdateAvailable);
             this.UpdateChecker.UpdateAvailable += new System.EventHandler(this.UpdateAvailable);
             // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(6, 412);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(113, 13);
-            this.lblVersion.TabIndex = 8;
-            this.lblVersion.Text = "Version: {0}.{1}.{2}.{3}";
-            this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
-            // 
             // UIAdvanced
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +342,5 @@
         private wyDay.Controls.AutomaticUpdater UpdateChecker;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lblVersion;
     }
 }

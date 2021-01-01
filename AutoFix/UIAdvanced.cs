@@ -4,8 +4,6 @@ using AutoFixer.UninstallsApp;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using System.Reflection;
-
 
 namespace AutoFixer
 {
@@ -33,10 +31,6 @@ namespace AutoFixer
         private void UIAdvanced_Load(object sender, EventArgs e)
         {
             UpdateChecker.ForceCheckForUpdate();
-
-            //set version info
-            Version version = Assembly.GetExecutingAssembly().GetName().Version;
-            this.lblVersion.Text = String.Format(this.lblVersion.Text, version.Major, version.Minor, version.Build, version.Revision);
         }
 
         /// <summary>
@@ -210,11 +204,6 @@ namespace AutoFixer
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Rivve/AutoFixer/");
-        }
-
-        private void lblVersion_Click(object sender, EventArgs e)
-        {
-
         }
     }
 

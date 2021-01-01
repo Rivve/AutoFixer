@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("AutoFixer")]
 [assembly: AssemblyProduct("AutoFixer - Your helping tool")]
-[assembly: AssemblyCopyright("Copyright © 2017 UtilityBox")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

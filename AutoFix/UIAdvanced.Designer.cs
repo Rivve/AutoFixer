@@ -43,12 +43,14 @@
             this.action_list = new System.Windows.Forms.DataGridView();
             this.uninstall = new System.Windows.Forms.TabControl();
             this.general_tab = new System.Windows.Forms.TabPage();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.auto_mode_button = new System.Windows.Forms.Button();
             this.reset_auto_button = new System.Windows.Forms.Button();
             this.UpdateChecker = new wyDay.Controls.AutomaticUpdater();
-            this.lblVersion = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.uninstall_apps_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uninstall_app_list)).BeginInit();
             this.toggle_tab.SuspendLayout();
@@ -59,6 +61,7 @@
             this.uninstall.SuspendLayout();
             this.general_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uninstall_apps_tab
@@ -210,6 +213,7 @@
             this.uninstall.Controls.Add(this.specs);
             this.uninstall.Controls.Add(this.toggle_tab);
             this.uninstall.Controls.Add(this.uninstall_apps_tab);
+            this.uninstall.Controls.Add(this.tabPage1);
             this.uninstall.Location = new System.Drawing.Point(4, 4);
             this.uninstall.Name = "uninstall";
             this.uninstall.SelectedIndex = 0;
@@ -230,6 +234,16 @@
             this.general_tab.TabIndex = 4;
             this.general_tab.Text = "General";
             this.general_tab.UseVisualStyleBackColor = true;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(4, 413);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(85, 13);
+            this.lblVersion.TabIndex = 2;
+            this.lblVersion.Text = "V. {0}.{1}.{2}.{3}";
+            this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
             // 
             // linkLabel1
             // 
@@ -290,15 +304,27 @@
             this.UpdateChecker.ReadyToBeInstalled += new System.EventHandler(this.UpdateAvailable);
             this.UpdateChecker.UpdateAvailable += new System.EventHandler(this.UpdateAvailable);
             // 
-            // lblVersion
+            // tabPage1
             // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(4, 413);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(85, 13);
-            this.lblVersion.TabIndex = 2;
-            this.lblVersion.Text = "V. {0}.{1}.{2}.{3}";
-            this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
+            this.tabPage1.Controls.Add(this.richTextBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(769, 428);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "About";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(763, 423);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // UIAdvanced
             // 
@@ -329,6 +355,7 @@
             this.general_tab.ResumeLayout(false);
             this.general_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -355,5 +382,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

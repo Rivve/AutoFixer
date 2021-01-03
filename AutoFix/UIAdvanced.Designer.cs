@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIAdvanced));
             this.uninstall_apps_tab = new System.Windows.Forms.TabPage();
             this.uninstall_app_list = new System.Windows.Forms.DataGridView();
             this.toggle_tab = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.toggle_message = new System.Windows.Forms.Label();
             this.togglelist = new System.Windows.Forms.DataGridView();
             this.specs = new System.Windows.Forms.TabPage();
@@ -48,9 +50,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.auto_mode_button = new System.Windows.Forms.Button();
             this.reset_auto_button = new System.Windows.Forms.Button();
-            this.UpdateChecker = new wyDay.Controls.AutomaticUpdater();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.UpdateChecker = new wyDay.Controls.AutomaticUpdater();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uninstall_apps_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uninstall_app_list)).BeginInit();
             this.toggle_tab.SuspendLayout();
@@ -60,8 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.action_list)).BeginInit();
             this.uninstall.SuspendLayout();
             this.general_tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).BeginInit();
             this.SuspendLayout();
             // 
             // uninstall_apps_tab
@@ -93,6 +96,7 @@
             // 
             // toggle_tab
             // 
+            this.toggle_tab.Controls.Add(this.button2);
             this.toggle_tab.Controls.Add(this.toggle_message);
             this.toggle_tab.Controls.Add(this.togglelist);
             this.toggle_tab.Location = new System.Drawing.Point(4, 22);
@@ -100,8 +104,18 @@
             this.toggle_tab.Padding = new System.Windows.Forms.Padding(3);
             this.toggle_tab.Size = new System.Drawing.Size(769, 428);
             this.toggle_tab.TabIndex = 2;
-            this.toggle_tab.Text = "Toggles";
+            this.toggle_tab.Text = "Usability";
             this.toggle_tab.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(688, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Restart PC";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toggle_message
             // 
@@ -178,7 +192,7 @@
             this.action_tab.Padding = new System.Windows.Forms.Padding(3);
             this.action_tab.Size = new System.Drawing.Size(769, 428);
             this.action_tab.TabIndex = 0;
-            this.action_tab.Text = "Actions";
+            this.action_tab.Text = "Performance";
             this.action_tab.UseVisualStyleBackColor = true;
             // 
             // execute_selected_options
@@ -289,21 +303,6 @@
             this.reset_auto_button.UseVisualStyleBackColor = true;
             this.reset_auto_button.Click += new System.EventHandler(this.ResetAutoMode);
             // 
-            // UpdateChecker
-            // 
-            this.UpdateChecker.Animate = false;
-            this.UpdateChecker.ContainerForm = this;
-            this.UpdateChecker.GUID = "91ee893c-7486-4722-8524-5bc2abd4d65d";
-            this.UpdateChecker.Location = new System.Drawing.Point(12, 12);
-            this.UpdateChecker.Name = "UpdateChecker";
-            this.UpdateChecker.Size = new System.Drawing.Size(16, 16);
-            this.UpdateChecker.TabIndex = 1;
-            this.UpdateChecker.UpdateType = wyDay.Controls.UpdateType.OnlyCheck;
-            this.UpdateChecker.WaitBeforeCheckSecs = 1;
-            this.UpdateChecker.wyUpdateCommandline = null;
-            this.UpdateChecker.ReadyToBeInstalled += new System.EventHandler(this.UpdateAvailable);
-            this.UpdateChecker.UpdateAvailable += new System.EventHandler(this.UpdateAvailable);
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.richTextBox1);
@@ -325,6 +324,26 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // UpdateChecker
+            // 
+            this.UpdateChecker.Animate = false;
+            this.UpdateChecker.ContainerForm = this;
+            this.UpdateChecker.GUID = "91ee893c-7486-4722-8524-5bc2abd4d65d";
+            this.UpdateChecker.Location = new System.Drawing.Point(12, 12);
+            this.UpdateChecker.Name = "UpdateChecker";
+            this.UpdateChecker.Size = new System.Drawing.Size(16, 16);
+            this.UpdateChecker.TabIndex = 1;
+            this.UpdateChecker.UpdateType = wyDay.Controls.UpdateType.OnlyCheck;
+            this.UpdateChecker.WaitBeforeCheckSecs = 1;
+            this.UpdateChecker.wyUpdateCommandline = null;
+            this.UpdateChecker.ReadyToBeInstalled += new System.EventHandler(this.UpdateAvailable);
+            this.UpdateChecker.UpdateAvailable += new System.EventHandler(this.UpdateAvailable);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // UIAdvanced
             // 
@@ -354,8 +373,8 @@
             this.uninstall.ResumeLayout(false);
             this.general_tab.ResumeLayout(false);
             this.general_tab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateChecker)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,5 +403,7 @@
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button button2;
     }
 }

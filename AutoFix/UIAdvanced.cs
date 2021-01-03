@@ -5,6 +5,10 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
 
 namespace AutoFixer
 {
@@ -221,6 +225,16 @@ namespace AutoFixer
         {
 
         }
-    }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo proc = new ProcessStartInfo();
+            proc.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.FileName = "cmd";
+            proc.Arguments = "/C shutdown -f -r";
+            Process.Start(proc);
+            Application.Exit();
+
+        }
+    }
 }

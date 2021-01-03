@@ -100,7 +100,7 @@ namespace AutoFixer
             ProcessStartInfo proc = new ProcessStartInfo();
             proc.WindowStyle = ProcessWindowStyle.Hidden;
             proc.FileName = "cmd";
-            proc.Arguments = "/C shutdown -f -r";
+            proc.Arguments = "/C shutdown -f -r -t";
             Process.Start(proc);
             Application.Exit();
         }
